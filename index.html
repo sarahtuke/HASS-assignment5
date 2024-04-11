@@ -1,1 +1,183 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>IDV: Assignment 04</title>
+
+  <meta charset="UTF-8">
+  <style></style>
+
+  <!-- CSS Styles-->
+  <style>
+
+.tooltip {
+      position: absolute;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #046468;
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    body {
+        font-family: "Roboto", helvetica, arial, sans-serif;
+        display: block;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+    }
+    h1 {
+       margin: 0px;
+       font-size: 30px;
+       font-weight: 400;
+       font-style:normal;
+       color: #fff;
+       text-transform:uppercase;
+    }
+    h2 {
+       margin: 2px;
+       font-size: 20px;
+       font-weight: 400;
+       font-style:normal;
+       color: #fff;
+       text-transform:uppercase;
+    }
+ 
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+    }
+
+        .scrolling-text {
+            position: relative;
+            font-family: "Roboto", helvetica, sans-serif;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+            color: #fff;
+    }
+
+        .scrolling-text p {
+            display: inline-block;
+            padding-left: 5%; /* Initial offset */
+            animation: scroll 50s linear infinite; /* Adjust the timing to control the speed */
+    }
+
+
+  </style>
+
+<!--Headings-->
+  <div>
+    <br>
+    <br>
+    <h1>Assignment 5</h1>
+    <br>
+    <br>
+   <h2> <em>  Atlas of Transions at S.E.A: <br> Tracing Southeast Asia’s Journey Towards Disaster Resilience </em></h2>
+  
+    
+  </div> 
+  <body style="background-color: #081129;">
+    
+</head>
+<body>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<!--Div ID's-->
+<div id="tooltip" class="tooltip"></div>
+
+<!--Scrolling Text-->
+<div class="scrolling-text">
+    <p style="color: #4f6eb3;">Brunei &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Cambodia &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;East Timor &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Indonesia &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp; Laos &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Malaysia &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Myanmar (Burma) &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Philippines &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Singapore &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Thailand &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Vietnam &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;</p>
+</div>
+
+<!--Scrolling Text: Archipelago-->
+<div class="scrolling-text">
+    <p  style="color: #354b79;">Malay Archipelago &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Riau Archipelago &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Maritime Southeast Asia &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Indonesian Archipelago &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;Nusantara &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;East Indies &nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;</p>
+</div>
+
+
+<!--Atlas Image-->
+<!--
+<div class="w3-col m6" style="position: relative;">
+    <img src="Kampung of Indonesia.webp" alt="LA" style="width:100%">
+    <img src="Kampung of Indonesia_hover_history of science .jpg" alt="Hover Image" class="hover-image" >
+</div>
+-->
+
+<div
+ class="w3-center" style="position: relative;">
+<img src="SEA in Oceans.png" alt="LA" style="width:100%; opacity: 0.6;">
+    </div>
+
+<script>
+//dimensions
+let width = 1000, height = 600;
+
+</script>
+
+<h2 class="w3-center">--&nbsp;*&nbsp;--</h2>
+
+<svg width="1000" height="3500" xmlns="http://www.w3.org/2000/svg"  class="w3-center">
+    <rect width="900" height="3200" x="10" y="10" rx="20" ry="20" fill="#354b79" class="w3-center"/>
+
+    <foreignObject x="20" y="10" width="860" height="3000">
+       <!-- <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:16px; color:white; height:100%; width:100%;"> -->
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:16px; color:white; height:100%; width:100%; padding: 0 20px; box-sizing: border-box; text-align: justify; font-family: Roboto, helvetica, sans-serif;" />
+            <br>
+            <br>
+            <h2 class="w3-center">Intention</h2> 
+            <p>To create a visual exploration of how environmental changes and urban growth in Southeast Asia might be contributing to the vulnerability of the region to coastal disasters.</p>
+            <p>The investigation aims to analyze and visualize the complex relationship between environmental transformations, urban expansion, and their collective impact on the vulnerability of Southeast Asia to coastal disasters. By overlaying data on ecological changes—such as deforestation and the disruption of natural habitats like mangroves and swamps—with patterns of urban growth and sprawl, I seek to uncover how these human and natural modifications have potentially increased the risk of and exposure to natural disasters.</p>
+            <p>The intention is to provide a comprehensive geographical representation that not only tracks these changes over time but also serves as a critical tool for understanding the dynamics at play in disaster risk and resilience in the region. This approach promises to offer valuable insights into the interdependencies between human activities and environmental sustainability, aiming to inform strategies for mitigating disaster risks and enhancing regional resilience to climate change.</p>
+            <br>
+            <br>
+            <h2 class="w3-center">Method/Approach</h2> 
+                <ol> 
+            <li> I plan to chronicle environmental transformations over time within the region, as data availability allows. This involves charting alterations such as deforestation and reforestation, along with disturbances to swamps and mangrove ecosystems</li>
+            <br>
+            <li> I aim to document urban expansion in the region, focusing on the spread of cities into natural landscapes and the impacts of urbanization on traditional community settings.</li>
+            <br>
+            <li> By integrating these two mapping endeavors, my goal is to investigate through visualizations whether the synergistic effect of environmental degradation and urban proliferation has heightened the vulnerability of Southeast Asian nations to environmental catastrophes. Specifically, I'm interested in examining how the reduction of natural buffers and the increase in fixed urban settlements might have amplified the risks associated with climate-related disasters, including inland flooding and coastal erosions.</li>
+            <br>
+                </ol>
+            <br>
+            <br>
+            <h2 class="w3-center">Research Questions</h2> 
+                <ol>
+            <li> How have patterns of deforestation, reforestation, and disturbances to natural habitats like swamps and mangroves correlated with the incidence and severity of coastal disasters in Southeast Asia over the last few decades?</li>
+            <br>
+            <li> In what ways has urban sprawl into ecological territories influenced the vulnerability of Southeast Asian cities to climate-related disasters such as inland flooding and coastal erosions? </li>
+            <br>
+            <li> How does the alteration of indigenous placemaking due to urban development affect community resilience to environmental disasters in Southeast Asia?</li>
+            <br>
+                </ol>
+            <br>
+            <br>
+            <h2 class="w3-center">Data Access</h2> 
+                <ol>
+            <li><a href="https://www.globalforestwatch.org/">Global Forest Watch </a>- Offers data on deforestation, forest cover, and landscape changes globally.</li>
+            <br>
+            <li><a href="https://datacatalog.worldbank.org/"</li> The World Bank Data Catalog </a>- Provides various datasets, including urban development indicators and disaster risk management</li>  
+            <br>
+            <li><a href="https://data.unep.org/app/">United Nations Environment Programme (UNEP)</a> - Sources for environmental data including mangrove and swamp disruption.</li>
+            </ol>
+        
+        
+        </div>
+    </foreignObject>
+
+
+  Sorry, your browser does not support inline SVG.  
+</svg>
+
+
+
+</body>
+</html>
